@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 import "./all-products.css";
 
 const BASE = import.meta.env.VITE_API;
@@ -65,7 +66,11 @@ function AllProducts() {
       {status === "ready" && products.length > 0 && (
         <div className="product-grid">
           {products.map((product) => (
-            <article className="product-card" key={product.id}>
+            <Link
+              className="product-card"
+              to={`/products/${product.id}`}
+              key={product.id}
+            >
               <img
                 className="product-image"
                 src={product.image_url}
@@ -76,7 +81,7 @@ function AllProducts() {
                 <p className="product-description">{product.description}</p>
                 <p className="product-price">{formatPrice(product.price)}</p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       )}

@@ -7,15 +7,6 @@
   text-align: center;
 }
 
-.status-message {
-  font-size: 0.95rem;
-  color: #6b6b6b;
-}
-
-.status-error {
-  color: #a13d3d;
-}
-
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

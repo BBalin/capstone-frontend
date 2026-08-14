@@ -34,6 +34,15 @@ button {
   cursor: pointer;
 }
 
+.status-message {
+  font-size: 0.95rem;
+  color: #6b6b6b;
+}
+
+.status-error {
+  color: #a13d3d;
+}
+
 #navbar {
   display: flex;
   align-items: center;
@@ -85,8 +94,8 @@ button {
   background: #722f37;
   color: #ffffff;
   text-align: center;
-  padding: 1rem 2rem;
-  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  margin-top: 2.5rem;
 }
 
 #footer p {
