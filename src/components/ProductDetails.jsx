@@ -85,7 +85,7 @@ function ProductDetails() {
     return (
       <p className="status-message status-error">
         Sorry, we couldn&apos;t load this product.{" "}
-        <Link to="/products">Back to all products</Link>
+        <Link to="/products">Back</Link>
       </p>
     );
   }
@@ -93,7 +93,7 @@ function ProductDetails() {
   return (
     <section className="product-details">
       <Link className="back-link" to="/products">
-        &larr; Back to all products
+        &larr; Back
       </Link>
 
       <div className="product-details-card">
@@ -117,7 +117,11 @@ function ProductDetails() {
               -
             </button>
             <span className="quantity-value">{quantity}</span>
-            <button type="button" onClick={increment} aria-label="Increase quantity">
+            <button
+              type="button"
+              onClick={increment}
+              aria-label="Increase quantity"
+            >
               +
             </button>
           </div>
