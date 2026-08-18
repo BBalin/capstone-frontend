@@ -3,6 +3,7 @@ import Layout from "./layout/Layout";
 import Login from "./auth/Login";
 import Register from "./auth/Register";
 import RequireAuth from "./auth/RequireAuth";
+import Home from "./components/Home";
 import AllProducts from "./components/AllProducts";
 import ProductDetails from "./components/ProductDetails";
 
@@ -16,7 +17,7 @@ export default function App() {
           index
           element={
             <RequireAuth>
-              <p>Home page</p>
+              <Home />
             </RequireAuth>
           }
         />
@@ -33,6 +34,22 @@ export default function App() {
           element={
             <RequireAuth>
               <ProductDetails />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <RequireAuth>
+              <p className="status-message">Cart page coming soon!</p>
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <RequireAuth>
+              <p className="status-message">Contact page coming soon!</p>
             </RequireAuth>
           }
         />
