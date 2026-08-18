@@ -18,7 +18,8 @@ function formatPrice(price) {
 
 function AllProducts() {
   const [products, setProducts] = useState([]);
-  const [status, setStatus] = useState("loading"); // "loading" | "error" | "ready"
+  const [status, setStatus] = useState("loading");
+  "error" | "ready";
 
   useEffect(() => {
     const controller = new AbortController();
@@ -51,11 +52,14 @@ function AllProducts() {
     <section className="all-products">
       <h1>Check out our Selection!</h1>
 
-      {status === "loading" && <p className="status-message">Loading our fresh bakes...</p>}
+      {status === "loading" && (
+        <p className="status-message">Loading our fresh bakes...</p>
+      )}
 
       {status === "error" && (
         <p className="status-message status-error">
-          Sorry, we couldn&apos;t load our products right now. Please try again later.
+          Sorry, we couldn&apos;t load our products right now. Please try again
+          later.
         </p>
       )}
 

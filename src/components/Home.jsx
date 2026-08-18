@@ -7,7 +7,7 @@ const BASE = import.meta.env.VITE_API;
 
 function Home() {
   const [products, setProducts] = useState([]);
-  const [status, setStatus] = useState("loading"); // "loading" | "error" | "ready"
+  const [status, setStatus] = useState("loading");
   const carouselRef = useRef(null);
 
   useEffect(() => {

@@ -95,3 +95,22 @@ button {
   margin: 0;
   font-size: 0.85rem;
 }
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 1.25rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.social-link:hover {
+  opacity: 0.75;
+}

@@ -6,6 +6,7 @@ import RequireAuth from "./auth/RequireAuth";
 import Home from "./components/Home";
 import AllProducts from "./components/AllProducts";
 import ProductDetails from "./components/ProductDetails";
+import Contact from "./components/Contact";
 
 export default function App() {
   return (
@@ -49,7 +50,7 @@ export default function App() {
           path="/contact"
           element={
             <RequireAuth>
-              <p className="status-message">Contact page coming soon!</p>
+              <Contact />
             </RequireAuth>
           }
         />
