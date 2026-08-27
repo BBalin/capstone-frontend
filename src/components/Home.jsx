@@ -46,7 +46,7 @@ function Home() {
   return (
     <section className="home">
       <div className="logo">
-        <img src="../images/3heartskitchen.jpg" alt="logo" />
+        <img src="/public/images/3heartskitchen.jpg" alt="logo" />
       </div>
 
       {status === "loading" && (
