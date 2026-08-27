@@ -1,0 +1,141 @@
+.cart-page {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cart-page h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+}
+
+.cart-page > .status-message {
+  margin: 0 0 2rem;
+}
+
+.cart-box {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2b2b2b;
+  border-radius: 2px;
+  background: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.checkout-button {
+  padding: 0.8rem 2.25rem;
+  border: none;
+  border-radius: 6px;
+  background: #722f37;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.checkout-button:hover {
+  background: #5c252c;
+}
+
+.cart-items {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #ffffff;
+  border: 1px solid #e6e1d8;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.cart-item-image {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #eee;
+  flex-shrink: 0;
+}
+
+.cart-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cart-item-name {
+  margin: 0;
+  font-weight: 600;
+}
+
+.cart-item-price {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  color: #8a5a2b;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-item-quantity button {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 6px;
+  border: 1px solid #8a5a2b;
+  background: #ffffff;
+  color: #8a5a2b;
+  font-weight: 600;
+}
+
+.cart-item-quantity button:hover:not(:disabled) {
+  background: #8a5a2b;
+  color: #ffffff;
+}
+
+.cart-item-quantity button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cart-item-quantity span {
+  min-width: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.cart-item-remove {
+  background: none;
+  border: none;
+  color: #a13d3d;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0;
+}
+
+.cart-item-remove:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+.cart-item-remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cart-total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}

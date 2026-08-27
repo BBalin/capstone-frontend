@@ -7,6 +7,8 @@ import Home from "./components/Home";
 import AllProducts from "./components/AllProducts";
 import ProductDetails from "./components/ProductDetails";
 import Contact from "./components/Contact";
+import Cart from "./components/Cart";
+import Profile from "./components/Profile";
 
 export default function App() {
   return (
@@ -42,7 +44,7 @@ export default function App() {
           path="/cart"
           element={
             <RequireAuth>
-              <p className="status-message">Cart page coming soon!</p>
+              <Cart />
             </RequireAuth>
           }
         />
@@ -51,6 +53,14 @@ export default function App() {
           element={
             <RequireAuth>
               <Contact />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <RequireAuth>
+              <Profile />
             </RequireAuth>
           }
         />

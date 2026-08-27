@@ -14,6 +14,7 @@ export default function Navbar() {
       </nav>
 
       <nav id="navbar-actions">
+        {token && <NavLink to="/profile">Profile</NavLink>}
         <NavLink to="/cart">Cart</NavLink>
         {token ? (
           <button onClick={logout}>Log out</button>

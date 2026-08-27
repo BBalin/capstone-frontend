@@ -21,9 +21,9 @@ function ProductDetails() {
   const { token } = useAuth();
 
   const [product, setProduct] = useState(null);
-  const [status, setStatus] = useState("loading"); // "loading" | "error" | "ready"
+  const [status, setStatus] = useState("loading");
   const [quantity, setQuantity] = useState(1);
-  const [cartStatus, setCartStatus] = useState("idle"); // "idle" | "adding" | "added" | "error"
+  const [cartStatus, setCartStatus] = useState("idle");
   const [cartError, setCartError] = useState(null);
 
   useEffect(() => {
@@ -85,7 +85,7 @@ function ProductDetails() {
     return (
       <p className="status-message status-error">
         Sorry, we couldn&apos;t load this product.{" "}
-        <Link to="/products">Back</Link>
+        <Link to="/products">Back to all products</Link>
       </p>
     );
   }
@@ -93,7 +93,7 @@ function ProductDetails() {
   return (
     <section className="product-details">
       <Link className="back-link" to="/products">
-        &larr; Back
+        &larr; Back to all products
       </Link>
 
       <div className="product-details-card">
