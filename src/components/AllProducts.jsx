@@ -19,7 +19,6 @@ function formatPrice(price) {
 function AllProducts() {
   const [products, setProducts] = useState([]);
   const [status, setStatus] = useState("loading");
-  "error" | "ready";
 
   useEffect(() => {
     const controller = new AbortController();

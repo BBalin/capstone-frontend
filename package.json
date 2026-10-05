@@ -1,5 +1,5 @@
 {
-  "name": "foobar",
+  "name": "3-hearts-kitchen-frontend",
   "type": "module",
   "scripts": {
     "dev": "vite",
