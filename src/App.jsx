@@ -16,30 +16,9 @@ export default function App() {
       <Route element={<Layout />}>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route
-          index
-          element={
-            <RequireAuth>
-              <Home />
-            </RequireAuth>
-          }
-        />
-        <Route
-          path="/products"
-          element={
-            <RequireAuth>
-              <AllProducts />
-            </RequireAuth>
-          }
-        />
-        <Route
-          path="/products/:id"
-          element={
-            <RequireAuth>
-              <ProductDetails />
-            </RequireAuth>
-          }
-        />
+        <Route index element={<Home />} />
+        <Route path="/products" element={<AllProducts />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
         <Route
           path="/cart"
           element={

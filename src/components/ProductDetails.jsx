@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router";
+import { Link, useParams, useLocation } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import "./product-details.css";
@@ -19,6 +19,7 @@ function formatPrice(price) {
 function ProductDetails() {
   const { id } = useParams();
   const { token } = useAuth();
+  const location = useLocation();
 
   const [product, setProduct] = useState(null);
   const [status, setStatus] = useState("loading");
@@ -126,14 +127,24 @@ function ProductDetails() {
             </button>
           </div>
 
-          <button
-            type="button"
-            className="add-to-cart-button"
-            onClick={addToCart}
-            disabled={cartStatus === "adding"}
-          >
-            {cartStatus === "adding" ? "Adding..." : "Add to Cart"}
-          </button>
+          {token ? (
+            <button
+              type="button"
+              className="add-to-cart-button"
+              onClick={addToCart}
+              disabled={cartStatus === "adding"}
+            >
+              {cartStatus === "adding" ? "Adding..." : "Add to Cart"}
+            </button>
+          ) : (
+            <Link
+              className="add-to-cart-button"
+              to="/login"
+              state={{ from: location }}
+            >
+              Log in to add to cart
+            </Link>
+          )}
 
           {cartStatus === "added" && (
             <p className="cart-feedback cart-success">Added to your cart!</p>

@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link, useNavigate, useLocation } from "react-router";
 
 import { useAuth } from "./AuthContext";
 import "./auth.css";
 
-/** A form that allows users to log into an existing account. */
 export default function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [error, setError] = useState(null);
 
@@ -16,12 +16,12 @@ export default function Login() {
     const password = formData.get("password");
     try {
       await login({ username, password });
-      navigate("/");
+      navigate(location.state?.from?.pathname ?? "/");
     } catch (e) {
       setError(e.message);
     }
   };
-
+  /** A form that allows users to log into an existing account. */
   return (
     <section className="auth-page">
       <div className="auth-card">
@@ -52,7 +52,11 @@ export default function Login() {
           {error && <output className="auth-error">{error}</output>}
         </form>
         <hr className="auth-divider auth-divider-bottom" />
-        <Link className="auth-switch-link" to="/register">
+        <Link
+          className="auth-switch-link"
+          to="/register"
+          state={location.state}
+        >
           Need an account? Register here.
         </Link>
       </div>
