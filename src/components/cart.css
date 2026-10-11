@@ -14,18 +14,8 @@
   margin: 0 0 2rem;
 }
 
-.cart-box {
-  min-height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #2b2b2b;
-  border-radius: 2px;
-  background: #ffffff;
-  margin-bottom: 2rem;
-}
-
 .checkout-button {
+  display: inline-block;
   padding: 0.8rem 2.25rem;
   border: none;
   border-radius: 6px;

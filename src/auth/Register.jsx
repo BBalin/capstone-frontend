@@ -4,6 +4,7 @@ import { Link, useNavigate, useLocation } from "react-router";
 import { useAuth } from "./AuthContext";
 import "./auth.css";
 
+/** A form that allows users to register for a new account */
 export default function Register() {
   const { register } = useAuth();
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ export default function Register() {
       setError(e.message);
     }
   };
-  /** A form that allows users to register for a new account */
+
   return (
     <section className="auth-page">
       <div className="auth-card">

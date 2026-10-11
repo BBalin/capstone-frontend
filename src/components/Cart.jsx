@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 
 import { useAuth } from "../auth/AuthContext";
 import "./cart.css";
@@ -123,13 +124,9 @@ function Cart() {
         <h1>Your cart is empty...</h1>
         <p className="status-message">Grab some delicious baked goods.</p>
 
-        <div className="cart-box">
-          <p className="status-message">Cart items go here...</p>
-        </div>
-
-        <button type="button" className="checkout-button">
-          Checkout
-        </button>
+        <Link className="checkout-button" to="/products">
+          Browse Products
+        </Link>
       </section>
     );
   }

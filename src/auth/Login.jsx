@@ -4,6 +4,7 @@ import { Link, useNavigate, useLocation } from "react-router";
 import { useAuth } from "./AuthContext";
 import "./auth.css";
 
+/** A form that allows users to log into an existing account. */
 export default function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ export default function Login() {
       setError(e.message);
     }
   };
-  /** A form that allows users to log into an existing account. */
+
   return (
     <section className="auth-page">
       <div className="auth-card">
